@@ -103,27 +103,27 @@
 			<p class="subtitle">FOR YOU</p>
 		</div>
 		<video class="playVid" src="assets/Video.mp4"></video>
-
-		<script>
-			(function() {
-				var playBtn = document.getElementsByClassName('playBtn')[0];
-				var playVid = document.getElementsByClassName('playVid')[0];
-				var loopVid = document.getElementsByClassName('loopVid')[0];
-				playBtn.addEventListener("touchend", handlePlay, false);
-
-				function handlePlay() {
-					loopVid.pause();
-					playVid.setAttribute("style", "display:inline;");
-					playVid.play();
-				};
-
-				playVid.addEventListener("ended", function () { 
-					playVid.webkitExitFullscreen();
-					playVid.setAttribute("style", "display:none;");
-					loopVid.play();
-				}, true);
-			})();
-		</script>
 	</div>
+	
+	<script>
+		(function() {
+			var playBtn = document.getElementsByClassName('playBtn')[0];
+			var playVid = document.getElementsByClassName('playVid')[0];
+			var loopVid = document.getElementsByClassName('loopVid')[0];
+			playBtn.addEventListener("touchend", handlePlay, false);
+
+			function handlePlay() {
+				loopVid.pause();
+				playVid.setAttribute("style", "display:inline;");
+				playVid.play();
+			};
+
+			playVid.addEventListener("ended", function () { 
+				playVid.webkitExitFullscreen();
+				playVid.setAttribute("style", "display:none;");
+				loopVid.play();
+			}, true);
+		})();
+	</script>
 </body>
 </html>
