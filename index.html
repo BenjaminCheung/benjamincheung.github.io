@@ -106,9 +106,11 @@
 
 			function handleEnd() {
 				playVid.play();
-			}
+			};
 
-			playVid.addEventListener("ended", function () { console.log("end");}, true);
+			playVid.addEventListener("ended", function () { 
+				playVid.webkitExitFullscreen();
+			}, true);
 		})();
 	</script>
 </body>
